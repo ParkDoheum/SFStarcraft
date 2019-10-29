@@ -13,9 +13,16 @@ public class Medic extends Unit {
 	}
 	
 	public void heal(Unit unit) {
-		//1씩 치료를 해야
+		//1씩 치료를 해야		
 		while(unit.max_hp > unit.hp) {
 			unit.hp++;
 		}
 	}
 }
+
+
+
+
+
+
+

@@ -15,6 +15,9 @@ public class Game {
 		System.out.println(d1);
 		System.out.println(f1);
 		
+		d1.heal(f1);
+		System.out.println(f1);
+		
 		
 		
 		

@@ -2,6 +2,7 @@ package com.hk.sc;
 
 public class SiegeTank extends AttackUnit {
 	boolean siegeMode;
+	int siegePowerOfAttack = 70;
 	
 	SiegeTank() {
 		max_hp = 150;
@@ -11,11 +12,29 @@ public class SiegeTank extends AttackUnit {
 	}
 	
 	void changeMode() {
-		siegeMode = !siegeMode;
+		siegeMode = !siegeMode;		
 	}
 	
 	@Override
 	public String toString() {
 		return "siegeMode : " + siegeMode;
 	}
+	
+	@Override
+	void attack(Unit unit) {
+		if(siegeMode) {
+			unit.hp -= siegePowerOfAttack;
+		} else {
+			super.attack(unit);
+		}
+	}
+	
 }
+
+
+
+
+
+
+
+
