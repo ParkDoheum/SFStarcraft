@@ -1,6 +1,6 @@
 package com.hk.sc;
 
-public class FireBat extends AttackUnit {
+public class FireBat extends AttackUnit implements Healable {
 	FireBat(){
 		max_hp = 50;
 		hp = max_hp;

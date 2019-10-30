@@ -1,6 +1,6 @@
 package com.hk.sc;
 
-public class Medic extends Unit {
+public class Medic extends Unit implements Healable {
 	Medic() {
 		max_hp = 60;
 		hp = max_hp;
@@ -12,11 +12,16 @@ public class Medic extends Unit {
 		return "Medic " + super.toString();
 	}
 	
-	public void heal(Unit unit) {
-		//1씩 치료를 해야		
-		while(unit.max_hp > unit.hp) {
-			unit.hp++;
-		}
+	public void heal(Unit unit) {		
+		if(unit instanceof Healable) {
+			//1씩 치료		
+			while(unit.max_hp > unit.hp) {
+				unit.hp++;
+			}
+			System.out.println("치료 완료!");
+		} else {
+			System.out.println("치료할 수 없습니다.");
+		}			
 	}
 }
 

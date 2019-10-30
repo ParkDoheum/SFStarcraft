@@ -1,6 +1,6 @@
 package com.hk.sc;
 
-public class Marine extends AttackUnit {
+public class Marine extends AttackUnit implements Healable {
 	
 	//마린 객체화 
 	//max_hp 값은 40
@@ -18,5 +18,5 @@ public class Marine extends AttackUnit {
 	@Override
 	public String toString() {
 		return "Marine " + super.toString();
-	}
+	}	
 }
