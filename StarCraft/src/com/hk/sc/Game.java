@@ -3,16 +3,17 @@ package com.hk.sc;
 public class Game {
 
 	public static void main(String[] args) {
-		Marine m1 = new Marine();	
-		SiegeTank siege = new SiegeTank();
-		Medic medic = new Medic();
+		Barrack brrack = new Barrack();
 		
-		medic.heal(siege);
+		Unit u = brrack.makeUnit(2);
 		
+		System.out.println(u);		
 		
+		Building b = new Barrack();
+		b.landing();
 		
-		
-		
+		b = new Academy();
+		b.landing();
 	}
 	
 }
